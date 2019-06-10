@@ -83,4 +83,3 @@ print(n9)
 
     [^abc] matches any character that isn’t between the brackets.
 '''
-

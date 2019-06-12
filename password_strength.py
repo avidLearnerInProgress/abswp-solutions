@@ -10,11 +10,11 @@ This regex will enforce these rules:
 '''
 
 def strong_password(pwd):
-    strength_pattern = r'^(?=.*?[a-zA-Z0-9\#\?!@\$%\^&*-]).{8,}$'
-    return True if re.match(strength_pattern, pwd) else False;
+    strength_pattern = r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$'
+    return True if re.match(strength_pattern, pwd) else False
 
 if __name__ == "__main__":
-    pwd = input("Enter password: ")
+    pwd = str(input("Enter password: "))
     if strong_password(pwd):
         print("Strong password")
     else:
